@@ -1,0 +1,646 @@
+/* =====================================
+   ORBIT DRIVING SCHOOL
+   style.css - Part 1
+===================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#111;
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#ff9800;
+    font-size:24px;
+}
+
+.logo p{
+    color:#ddd;
+    font-size:13px;
+}
+
+/* Navigation */
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.70),
+    rgba(0,0,0,.70)),
+    url("images/hero-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.hero-left{
+
+    flex:1;
+    color:#fff;
+}
+
+.hero-left h4{
+
+    color:#ff9800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.hero-left h1{
+
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-left h2{
+
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.hero-left p{
+
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* Buttons */
+
+.btn{
+
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    margin-right:15px;
+    transition:.3s;
+}
+
+.btn-orange{
+
+    background:#ff9800;
+}
+
+.btn-green{
+
+    background:#25D366;
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+}
+
+/* Hero Images */
+
+.hero-right{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.hero-right img{
+
+    width:280px;
+    transition:.4s;
+}
+
+.hero-right img:hover{
+
+    transform:scale(1.08);
+}
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about{
+    padding:100px 0;
+    background:#fff;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    font-size:42px;
+    color:#ff9800;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:20px;
+    color:#555;
+}
+
+/* =====================================
+   SERVICES
+===================================== */
+
+.services{
+    padding:100px 0;
+    background:#f8f8f8;
+}
+
+.services h2{
+    text-align:center;
+    font-size:42px;
+    color:#ff9800;
+}
+
+.section-title{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:50px;
+    color:#666;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:#fff;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.service-card i{
+    font-size:50px;
+    color:#ff9800;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    background:#ff9800;
+    color:#fff;
+}
+
+.service-card:hover i{
+    color:#fff;
+}
+
+/* =====================================
+   WHY CHOOSE US
+===================================== */
+
+.why-us{
+    padding:100px 0;
+    background:#111;
+    color:#fff;
+}
+
+.why-us h2{
+    text-align:center;
+    color:#ff9800;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.why-grid div{
+    background:#1b1b1b;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.why-grid div:hover{
+    background:#ff9800;
+}
+
+.why-grid h3{
+    margin-bottom:15px;
+}
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.gallery h2{
+    text-align:center;
+    font-size:42px;
+    color:#ff9800;
+    margin-bottom:50px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================
+   TESTIMONIALS
+===================================== */
+
+.testimonials{
+    padding:100px 0;
+    background:#f7f7f7;
+}
+
+.testimonials h2{
+    text-align:center;
+    font-size:42px;
+    color:#ff9800;
+    margin-bottom:50px;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+}
+
+.testimonial-card h3{
+    color:#ff9800;
+    margin-bottom:15px;
+}
+
+.testimonial-card h4{
+    margin-top:20px;
+    color:#444;
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact{
+    padding:100px 0;
+    background:#111;
+    color:#fff;
+}
+
+.contact h2{
+    text-align:center;
+    color:#ff9800;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.contact-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info p{
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/* =====================================
+   FLOATING WHATSAPP BUTTON
+===================================== */
+
+.floating-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    z-index:999;
+    transition:.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media(max-width:991px){
+
+.hero-container,
+.about-container,
+.contact-box{
+    flex-direction:column;
+    display:flex;
+}
+
+.hero{
+    padding-top:120px;
+}
+
+.hero-left{
+    text-align:center;
+}
+
+.hero-left h1{
+    font-size:42px;
+}
+
+.hero-left h2{
+    font-size:24px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero-right{
+    margin-top:40px;
+}
+
+.hero-right img{
+    width:220px;
+}
+
+header .container{
+    flex-direction:column;
+    height:auto;
+    padding:15px 0;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:10px;
+}
+
+.about-content,
+.services,
+.gallery,
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    gap:30px;
+}
+
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+@media(max-width:576px){
+.hero-left h1{
+    font-size:34px;
+}
+.hero-left h2{
+    font-size:20px;
+}
+.logo h2{
+    font-size:18px;
+}
+.logo img{
+    width:50px;
+    height:50px;
+}
+.btn{
+    width:100%;
+    margin-bottom:10px;
+    text-align:center;
+}
+.gallery-grid,
+.service-grid,
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+}
+/* =====================================
+   SIMPLE FADE ANIMATION
+===================================== */
+.hero,
+.about,
+.services,
+.gallery,
+.testimonials,
+.contact{
+    animation:fadeUp .8s ease;
+}
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+/* =====================================
+   SMOOTH HOVER EFFECTS
+===================================== */
+.service-card,
+.testimonial-card,
+.gallery-grid img{
+transition:.35s ease;
+}
+.service-card:hover,
+.testimonial-card:hover{
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
