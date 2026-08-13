@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orbitdrivinglicence-commits.github.io/Orbit-Driving-School-/sitemap.xml
