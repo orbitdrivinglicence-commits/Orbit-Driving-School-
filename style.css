@@ -1140,6 +1140,22 @@
     }
 }
 
+/* Developer Credit */
+.developer-credit {
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 13px;
+    color: #ffffff;
+    background: #111111;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.5px;
+}
+
+.developer-credit span {
+    color: #ff7a00;
+    font-weight: 700;
+}
+
 
 
 
