@@ -1,96 +1,34 @@
-/* ==========================================
-   ORBIT DRIVING SCHOOL
-   script.js
-========================================== */
 
-// Smooth Scroll
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e){
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+const overlay = document.querySelector('.menu-overlay');
+const closeButton = document.querySelector('.menu-close');
 
-        const target = this.getAttribute('href');
-
-        if(target.startsWith("#")){
-
-            e.preventDefault();
-
-            document.querySelector(target).scrollIntoView({
-                behavior:'smooth'
-            });
-
-        }
-
-    });
-});
-
-
-// Sticky Header Shadow
-
-window.addEventListener("scroll",()=>{
-
-    const header=document.querySelector("header");
-
-    if(window.scrollY>50){
-
-        header.style.background="#111";
-        header.style.boxShadow="0 5px 20px rgba(0,0,0,.25)";
-
-    }else{
-
-        header.style.boxShadow="none";
-
-    }
-
-});
-
-
-// Fade Animation
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
+function openMenu() {
+  nav.classList.add('open');
+  overlay.classList.add('open');
+  document.body.classList.add('menu-open');
+  toggle.setAttribute('aria-expanded', 'true');
+  overlay.setAttribute('aria-hidden', 'false');
 }
 
-});
-
-});
-
-document.querySelectorAll(".service-card,.testimonial-card,.gallery-grid img,.about-content,.contact-box").forEach(el=>{
-
-observer.observe(el);
-
-});
-
-
-// Current Year
-
-const footer=document.querySelector("footer p");
-
-if(footer){
-
-footer.innerHTML="© "+new Date().getFullYear()+" Orbit Driving School | All Rights Reserved";
-
+function closeMenu() {
+  nav.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  toggle.setAttribute('aria-expanded', 'false');
+  overlay.setAttribute('aria-hidden', 'true');
 }
 
+toggle.addEventListener('click', openMenu);
+closeButton.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
 
-// Contact Form
-
-const form=document.querySelector("form");
-
-if(form){
-
-form.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("Thank You! We will contact you soon.");
-
-form.reset();
-
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
 });
 
-}
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMenu();
+});
+
